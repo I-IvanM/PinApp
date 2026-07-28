@@ -1,0 +1,245 @@
+PinApp
+│
+├── App
+│   ├── PinAppApp.swift
+│   ├── AppView.swift
+│   ├── AppRouter.swift
+│   ├── AppDependencies.swift
+│   └── AppConfiguration.swift
+│
+├── Core
+│   │
+│   ├── Domain
+│   │   │
+│   │   ├── Models
+│   │   │   ├── Location.swift
+│   │   │   ├── Country.swift
+│   │   │   ├── Region.swift
+│   │   │   ├── City.swift
+│   │   │   ├── Trip.swift
+│   │   │   ├── Photo.swift
+│   │   │   ├── Tag.swift
+│   │   │   ├── Area.swift
+│   │   │   └── Statistics.swift
+│   │   │
+│   │   ├── ValueObjects
+│   │   │   ├── Coordinate.swift
+│   │   │   ├── LocationID.swift
+│   │   │   ├── CountryCode.swift
+│   │   │   ├── RegionCode.swift
+│   │   │   └── ColorIdentifier.swift
+│   │   │
+│   │   ├── Enums
+│   │   │   ├── LocationType.swift
+│   │   │   ├── AreaLevel.swift
+│   │   │   ├── MapStyle.swift
+│   │   │   └── ExportFormat.swift
+│   │   │
+│   │   └── Protocols
+│   │       ├── Repository.swift
+│   │       ├── Importer.swift
+│   │       ├── Exporter.swift
+│   │       └── Searchable.swift
+│   │
+│   ├── Storage
+│   │   │
+│   │   ├── Repositories
+│   │   │   ├── LocationRepository.swift
+│   │   │   ├── CountryRepository.swift
+│   │   │   ├── RegionRepository.swift
+│   │   │   ├── PhotoRepository.swift
+│   │   │   ├── TagRepository.swift
+│   │   │   └── TripRepository.swift
+│   │   │
+│   │   ├── Database
+│   │   │   ├── Database.swift
+│   │   │   ├── DatabaseMigration.swift
+│   │   │   └── DatabaseConfiguration.swift
+│   │   │
+│   │   ├── Import
+│   │   │   ├── GPXImporter.swift
+│   │   │   ├── KMLImporter.swift
+│   │   │   ├── GeoJSONImporter.swift
+│   │   │   └── PhotoImporter.swift
+│   │   │
+│   │   └── Export
+│   │       ├── GPXExporter.swift
+│   │       ├── KMLExporter.swift
+│   │       ├── GeoJSONExporter.swift
+│   │       ├── JSONExporter.swift
+│   │       └── CSVExporter.swift
+│   │
+│   ├── Services
+│   │   ├── LocationService.swift
+│   │   ├── CountryService.swift
+│   │   ├── RegionService.swift
+│   │   ├── StatisticsService.swift
+│   │   ├── SearchService.swift
+│   │   ├── AreaColoringService.swift
+│   │   ├── ReverseGeocodingService.swift
+│   │   ├── TripService.swift
+│   │   ├── AchievementService.swift
+│   │   ├── TimelineService.swift
+│   │   ├── HeatmapService.swift
+│   │   └── SyncService.swift
+│   │
+│   ├── Infrastructure
+│   │   │
+│   │   ├── SwiftData
+│   │   │   ├── SwiftDataLocationRepository.swift
+│   │   │   ├── SwiftDataCountryRepository.swift
+│   │   │   ├── SwiftDataRegionRepository.swift
+│   │   │   ├── SwiftDataPhotoRepository.swift
+│   │   │   ├── SwiftDataTagRepository.swift
+│   │   │   └── SwiftDataTripRepository.swift
+│   │   │
+│   │   ├── MapKit
+│   │   │   ├── MapRenderer.swift
+│   │   │   ├── PolygonRenderer.swift
+│   │   │   ├── AnnotationFactory.swift
+│   │   │   └── OverlayFactory.swift
+│   │   │
+│   │   ├── CoreLocation
+│   │   │   ├── LocationManager.swift
+│   │   │   └── AuthorizationManager.swift
+│   │   │
+│   │   ├── Photos
+│   │   │   ├── PhotoLibraryManager.swift
+│   │   │   ├── EXIFReader.swift
+│   │   │   └── ThumbnailGenerator.swift
+│   │   │
+│   │   ├── CloudKit
+│   │   │   ├── CloudSyncManager.swift
+│   │   │   ├── CloudSerializer.swift
+│   │   │   └── ConflictResolver.swift
+│   │   │
+│   │   └── Geometry
+│   │       ├── PolygonLoader.swift
+│   │       ├── PolygonIndex.swift
+│   │       ├── PolygonSearch.swift
+│   │       └── PointInPolygon.swift
+│   │
+│   └── Utilities
+│       ├── Logger.swift
+│       ├── DateFormatter.swift
+│       ├── ColorExtensions.swift
+│       ├── FileManager.swift
+│       ├── JSONDecoder.swift
+│       └── Constants.swift
+│
+├── Features
+│   │
+│   ├── Map
+│   │   ├── MapView.swift
+│   │   ├── MapViewModel.swift
+│   │   ├── MapToolbar.swift
+│   │   └── MapCoordinator.swift
+│   │
+│   ├── Pins
+│   │   ├── PinEditorView.swift
+│   │   ├── PinEditorViewModel.swift
+│   │   ├── PinDetailsView.swift
+│   │   ├── PinDetailsViewModel.swift
+│   │   └── PinPhotoGallery.swift
+│   │
+│   ├── Search
+│   │   ├── SearchView.swift
+│   │   ├── SearchViewModel.swift
+│   │   ├── SearchFilters.swift
+│   │   └── SearchResultCell.swift
+│   │
+│   ├── Statistics
+│   │   ├── StatisticsView.swift
+│   │   ├── StatisticsViewModel.swift
+│   │   ├── CountryStatisticsView.swift
+│   │   └── RegionStatisticsView.swift
+│   │
+│   ├── AreaColoring
+│   │   ├── AreaColoringView.swift
+│   │   ├── AreaColoringViewModel.swift
+│   │   └── AreaProgressView.swift
+│   │
+│   ├── Timeline
+│   │   ├── TimelineView.swift
+│   │   ├── TimelineViewModel.swift
+│   │   └── TimelineCell.swift
+│   │
+│   ├── Heatmap
+│   │   ├── HeatmapView.swift
+│   │   ├── HeatmapViewModel.swift
+│   │   └── HeatmapRenderer.swift
+│   │
+│   ├── PhotoImport
+│   │   ├── PhotoImportView.swift
+│   │   ├── PhotoImportViewModel.swift
+│   │   └── PhotoImportProgressView.swift
+│   │
+│   ├── GPXImport
+│   │   ├── GPXImportView.swift
+│   │   ├── GPXImportViewModel.swift
+│   │   └── ImportResultView.swift
+│   │
+│   ├── Export
+│   │   ├── ExportView.swift
+│   │   ├── ExportViewModel.swift
+│   │   └── ExportProgressView.swift
+│   │
+│   ├── CloudSync
+│   │   ├── CloudSyncView.swift
+│   │   ├── CloudSyncViewModel.swift
+│   │   └── SyncStatusView.swift
+│   │
+│   ├── Achievements
+│   │   ├── AchievementsView.swift
+│   │   ├── AchievementsViewModel.swift
+│   │   └── AchievementCell.swift
+│   │
+│   ├── TravelGoals
+│   │   ├── GoalsView.swift
+│   │   ├── GoalsViewModel.swift
+│   │   └── GoalProgressView.swift
+│   │
+│   └── Settings
+│       ├── SettingsView.swift
+│       ├── SettingsViewModel.swift
+│       ├── AppearanceSettingsView.swift
+│       ├── StorageSettingsView.swift
+│       └── AboutView.swift
+│
+├── Shared
+│   ├── Components
+│   │   ├── PrimaryButton.swift
+│   │   ├── LoadingView.swift
+│   │   ├── EmptyStateView.swift
+│   │   ├── ErrorView.swift
+│   │   ├── SearchBar.swift
+│   │   └── TagView.swift
+│   │
+│   ├── Styles
+│   │   ├── Colors.swift
+│   │   ├── Fonts.swift
+│   │   └── Theme.swift
+│   │
+│   └── Extensions
+│       ├── View+Extensions.swift
+│       ├── Color+Extensions.swift
+│       ├── Date+Extensions.swift
+│       ├── CLLocation+Extensions.swift
+│       └── MKMapView+Extensions.swift
+│
+├── Resources
+│   ├── Assets.xcassets
+│   ├── Localizable.xcstrings
+│   ├── Preview Content
+│   ├── Sample Data
+│   └── GeoJSON
+│       ├── Countries.geojson
+│       ├── Regions.geojson
+│       └── Cities.geojson
+│
+├── Tests
+│   ├── UnitTests
+│   ├── IntegrationTests
+│   └── UITests
+│
+└── README.md
