@@ -40,7 +40,12 @@ The app has four tabs:
 
 - **Settings**: map appearance settings and photo coordinate import button.
 
-![mapTab](images/mapTab.png) ![pinsTab](images/pinsTab.png) ![statisticsTab](images/statisticsTab.png) ![settingsTab](images/settingsTab.png) 
+<p>
+  <img src="images/mapTab.PNG" width="300">
+  <img src="images/pinsTab.PNG" width="300">
+  <img src="images/statisticsTab.PNG" width="300">
+  <img src="images/settingsTab.PNG" width="300">
+</p> 
 
 ### Install and run with Xcode
 
