@@ -34,14 +34,13 @@ The app has four tabs:
 
 - **Map**: shows pins, visited countries, and the current user location. Long press on the map to create a pin.
 
-  
 - **Pins**: shows all saved pins as a list. Search and filters help to find a location by title, country, tag, or type.
 
-  
 - **Statistics**: shows travel progress by countries and continents, as well as totals for each location type.
 
-  
 - **Settings**: map appearance settings and photo coordinate import button.
+
+![mapTab](images/mapTab.png) ![pinsTab](images/pinsTab.png) ![statisticsTab](images/statisticsTab.png) ![settingsTab](images/settingsTab.png) 
 
 ### Install and run with Xcode
 
