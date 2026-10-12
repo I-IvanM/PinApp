@@ -52,9 +52,9 @@ The app has four tabs:
 
 Requirements:
 
-– An iPhone or iPad running iOS 26.5 or later.
-– An internet connection.
-– The TestFlight app installed on your device.
++ An iPhone or iPad running iOS 26.5 or later.
++ An internet connection.
++ The TestFlight app installed on your device.
 
 1. If TestFlight is not installed, download it from the App Store.
 2. Open this link on your iPhone or iPad: https://testflight.apple.com/join/Aug5g9Nz
