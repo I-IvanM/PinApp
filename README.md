@@ -10,6 +10,7 @@ The app is structured for gradual development, so services are built around the 
 
 - [Usage](#usage)
   - [Features](#features)
+  - [Install and run with TestFlight](#install-and-run-with-TestFlight)
   - [Install and run with Xcode](#install-and-run-with-xcode)
   - [Data sources](#data-sources)
 - [Development](#development)
@@ -47,6 +48,22 @@ The app has four tabs:
   <img src="images/settingsTab.PNG" width="300">
 </p> 
 
+### Install and run with TestFlight
+
+Requirements:
+
+– An iPhone or iPad running iOS 26.5 or later.
+– An internet connection.
+– The TestFlight app installed on your device.
+
+1. If TestFlight is not installed, download it from the App Store.
+2. Open this link on your iPhone or iPad: https://testflight.apple.com/join/Aug5g9Nz
+3. Tap Accept to join the public test.
+4. Tap Install to download and install PinApp.
+5. Once the installation is complete, open PinApp from your Home Screen.
+6. When the app asks for permissions, allow location access to show your current position and allow full photo library access before importing photos.
+
+
 ### Install and run with Xcode
 
 Requirements:
@@ -62,7 +79,7 @@ Requirements:
 Briefly, open the PinApp target, select "Signing & Capabilities", choose your Apple development team, and let Xcode create a unique bundle identifier if needed. 
 6. Press the Run button.
 7. If you are running the app on a physical device you may need to turn on the developer mode and confirm that you trust this developer in the iPhone settings. [Instruction](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)
-8. When the app asks for permissions, allow location access to show your current position and allow photo library access before importing photos.
+8. When the app asks for permissions, allow location access to show your current position and allow full photo library access before importing photos.
 
 ### Data sources
 
