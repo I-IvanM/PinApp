@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Mountain {
+    var mountainName: String
+    var height: Double? // in meeter
+    var mountainCoordinate: Coordinate
+    var mountainPinCount: Int
+    
+}

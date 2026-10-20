@@ -7,4 +7,8 @@
 
 import Foundation
 
-enum LocationType {}
+enum LocationType: Codable {
+    case city(CityVisitData)
+    case mountain(MountainVisitData)
+    case point
+}

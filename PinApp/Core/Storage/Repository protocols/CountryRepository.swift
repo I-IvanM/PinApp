@@ -13,8 +13,6 @@ protocol CountryRepository {
 
     func fetch(countryID: String)throws -> Country?
 
-    func save(_ country: Country)throws
-
-    func delete(_ countryID: String)throws
+    func setPinCount(_ pinCount: Int, for countryID: String)throws
 
 }

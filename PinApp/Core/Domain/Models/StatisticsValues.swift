@@ -1,5 +1,5 @@
 //
-//  Statistics.swift
+//  StatisticsValues.swift
 //  PinApp
 //
 //  Created by I_IvanM on 27.07.2026.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Statistics {
+struct StatisticsValues {
 
     var countryCount: Int
     var visitedCountryCount: Int
@@ -34,16 +34,9 @@ struct Statistics {
     var oceaniaCount: Int
     var oceaniaVisitedCount: Int
 
-    var visitedCountries: [CountryStatistics]
+    var visitedCountries: [Country]
 
     var pointCount: Int
     var cityCount: Int
     var mountainCount: Int
-}
-
-struct CountryStatistics {
-
-    var countryID: String
-    var countryName: String
-    var pinCount: Int
 }

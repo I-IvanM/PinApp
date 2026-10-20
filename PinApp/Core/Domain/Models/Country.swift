@@ -7,4 +7,9 @@
 
 import Foundation
 
-struct Country {}
+struct Country {
+    let countryID: String
+    var countryName: String
+    var countryPinCount: Int
+    var continent: String
+}

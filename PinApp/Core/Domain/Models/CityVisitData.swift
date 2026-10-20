@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct CityVisitData: Codable {
+    
+    var cityCenterCoordinate: Coordinate
+    var address: String
+}

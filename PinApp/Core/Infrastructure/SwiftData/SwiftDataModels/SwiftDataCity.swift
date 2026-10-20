@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class SwiftDataCity {
+    
+    var cityName: String
+    var cityCenterCoordinate: Coordinate
+    var cityPinCount: Int
+    
+    init(
+        
+        cityName: String,
+        cityCenterCoordinate: Coordinate,
+        cityPinCount: Int,
+        
+    ){
+        
+        self.cityName = cityName
+        self.cityCenterCoordinate = cityCenterCoordinate
+        self.cityPinCount = cityPinCount
+    }
+}

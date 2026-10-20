@@ -14,8 +14,12 @@ struct PhotoImportView: View {
 
     @State private var isShowingConfirmation = false
     @State private var isImporting = false
-    @State private var progress: Double = 0
-    @State private var importedPinsCount = 0
+    
+    @State private var progress = PhotoImportProgress(
+        processedCount: 0,
+        totalCount: 0,
+        createdCount: 0
+    )
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -86,20 +90,8 @@ struct PhotoImportView: View {
     }
 
     private var progressView: some View {
-        VStack(spacing: 8) {
-            ProgressView(value: progress)
-                .tint(.primary)
-
-            Text("\(importedPinsCount) pins added")
-                .font(.caption)
-                .foregroundStyle(.primary)
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .frame(maxWidth: .infinity)
-        .glassEffect(
-            .regular,
-            in: RoundedRectangle(cornerRadius: 18)
+        PhotoImportProgressView(
+            progress: progress
         )
     }
 
@@ -109,25 +101,19 @@ struct PhotoImportView: View {
         }
 
         isImporting = true
-        progress = 0
-        importedPinsCount = 0
+        progress = PhotoImportProgress(
+            processedCount: 0,
+            totalCount: 0,
+            createdCount: 0
+        )
 
         Task {
             do {
                 try await dependencies
                     .fromPhotoCoordinatesImportService
-                    .importPhotos { importProgress in
+                    .importPhotos { progress in
 
-                        if importProgress.totalCount > 0 {
-                            progress =
-                                Double(importProgress.processedCount)
-                                / Double(importProgress.totalCount)
-                        } else {
-                            progress = 1
-                        }
-
-                        importedPinsCount =
-                            importProgress.createdCount
+                        self.progress = progress
                     }
             } catch {
                 print("Photo import failed: \(error)")

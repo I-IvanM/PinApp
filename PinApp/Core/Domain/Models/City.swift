@@ -7,4 +7,8 @@
 
 import Foundation
 
-struct City {}
+struct City {
+    var cityName: String
+    var cityCenterCoordinate: Coordinate
+    var cityPinCount: Int
+}

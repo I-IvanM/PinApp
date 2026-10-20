@@ -7,4 +7,9 @@
 
 import Foundation
 
-struct Photo {}
+struct Photo: Codable {
+    let photoID: UUID
+    var localIdentifier: String
+    var capturedAt: Date?
+    var coordinate: Coordinate?
+}

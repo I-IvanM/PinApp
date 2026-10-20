@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum LocationTypeSelection: String, Codable {
+    case point
+    case city
+    case mountain
+}

@@ -7,4 +7,8 @@
 
 import Foundation
 
-enum MapStyle {}
+enum MapStyle: String {
+    case standard
+    case satellite
+    case hybrid
+}

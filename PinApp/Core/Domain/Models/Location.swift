@@ -7,4 +7,20 @@
 
 import Foundation
 
-struct Location {}
+struct Location {
+    let id: UUID
+    var title: String
+    var coordinate: Coordinate
+    
+    var type: LocationType
+    
+    var note: String?
+    var tags: [String]?
+    var photoIDs: [UUID]?
+    
+    var countryID: String
+    var date: Date
+    var color: String
+    var pinCount: Int
+    
+}

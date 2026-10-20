@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class SwiftDataPhoto {
+    
+    var photoID: UUID
+    var localIdentifier: String
+    var capturedAt: Date?
+    var coordinate: Coordinate?
+    
+    init (
+    photoID: UUID,
+    localIdentifier: String,
+    capturedAt: Date? = nil,
+    coordinate: Coordinate? = nil
+    ) {
+        self.photoID = photoID
+        self.localIdentifier = localIdentifier
+        self.capturedAt = capturedAt
+        self.coordinate = coordinate
+    }
+}

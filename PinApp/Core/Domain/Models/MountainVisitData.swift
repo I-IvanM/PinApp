@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MountainVisitData: Codable {
+    
+    var mountainCoordinate: Coordinate
+    var achievedHeight: Double?
+}

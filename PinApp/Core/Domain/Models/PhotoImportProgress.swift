@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct PhotoImportProgress {
+
+    let processedCount: Int
+    let totalCount: Int
+    let createdCount: Int
+}

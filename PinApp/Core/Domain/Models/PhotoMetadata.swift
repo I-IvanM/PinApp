@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct PhotoMetadata {
+
+    let coordinate: Coordinate
+    let date: Date?
+    let title: String?
+}
